@@ -16,21 +16,26 @@ const songs = [
     name: 'jacinto-1',
     displayName: 'Electric Chill Machine',
     artist: 'Jacinto Design',
+    imageSrc:'https://images.unsplash.com/photo-1620796184246-770a2849f8b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80'
+
   },
   {
     name: 'jacinto-2',
     displayName: 'Seven Nation Army (Remix)',
     artist: 'Jacinto Design',
+    imageSrc:'https://images.unsplash.com/photo-1620757482070-4994c580db7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80'
   },
   {
     name: 'jacinto-3',
     displayName: 'Goodnight, Disco Queen',
     artist: 'Jacinto Design',
+    imageSrc:'https://images.unsplash.com/photo-1620497772625-2c84eaaf99fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
   },
   {
     name: 'metric-1',
     displayName: 'Front Row (Remix)',
     artist: 'Metric/Jacinto Design',
+    imageSrc:'https://images.unsplash.com/photo-1620646088725-d552fea45964?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
   },
 ];
 
@@ -61,7 +66,7 @@ function loadSong(song) {
   title.textContent = song.displayName;
   artist.textContent = song.artist;
   music.src = `music/${song.name}.mp3`;
-  image.src = `img/${song.name}.jpg`;
+  image.src = `${song.imageSrc}`;
 }
 
 // Current Song
@@ -131,3 +136,4 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
+
